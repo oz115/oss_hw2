@@ -7,19 +7,25 @@ def plus(x, y):
 def main():
     check = 1
     print("Welcome to calcuator")
-    while check >= 1:        
-        print("0: exit, 1: plus")
-        check = int(input())
-        if check == 1:
-            print("First Number")
-            x = int(input())
-            print("Second Number")
-            y = int(input())
-            print("answer : ", plus(x,y))
-        elif check > 1:
-            print("Unsupported")
-        else:
-            print("Thank you")
+    while 1:
+        try:
+            while check >= 1:        
+                print("0: exit, 1: plus")
+                check = int(input())
+                if check == 1:
+                    print("First Number")
+                    x = int(input())
+                    print("Second Number")
+                    y = int(input())
+                    print("answer : ", plus(x,y))
+                elif check > 1:
+                    print("Unsupported")
+                else:
+                    print("Thank you")
+                    exit()   
+
+        except ValueError:
+            print("숫자를 입력하세요.")
 
 if __name__ == "__main__":
     main()
